@@ -1,0 +1,44 @@
+body{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wave{
+    position:relative;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 100%;
+    background-color: white;
+    overflow:hidden;
+}
+
+.wave::before{
+    position:absolute;
+    content: "aaaaaaaaaaaa";
+    color: transparent;
+    font-size: 5em;
+    text-decoration-line:underline;
+    text-decoration-style:wavy;
+    text-decoration-color: red;
+    bottom:40%;
+
+    animation: waving 1s linear infinite;
+}
+
+.wave:hover{
+    box-shadow: 0px 0px 20px white;
+}
+
+@keyframes waving{
+    0% {
+        transform: translateX(-40px);
+    }
+    
+    100%{
+        transform:translateX(0px);
+    }
+}
